@@ -1,0 +1,35 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link  rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+
+    <title>Vue JS</title>
+</head>
+<body>
+    <main id="app">
+
+        <h3>{{ message }}</h3>
+
+        <ul>
+            <li v-for="fruit in deliciousFruit"> <!---WHEN YOU HAVE REPEATING DATA you want elements to repeat:::-->
+                <p v-on:click="logFruit"> {{ fruit.name }} is {{ fruit.flavour }} </p><!--target the first array/variables you want and then use a word in the middle and target the next array/variable in more mustache brackets-->
+            </li>
+        </ul>
+
+        <a :class="{ 'no-decorate' : anchorOff }" :href="targetURL" target="_blank">{{ targetURL }}</a>
+
+        <p v-if="hazVue"> 
+            {{ vuemessage }} 
+        </p> <!---if its true it will show up, if its false it wont-->
+    </main>
+
+    <footer>
+        {{ footermessage }} <!---THIS EXAMPLE WONT WORK BECAUSE IT IS OUTSIDE OF THE MAIN TAGS-->
+    </footer>
+
+    <script src =js/main.js></script>
+</body>
+</html>
